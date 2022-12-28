@@ -37,5 +37,10 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
                 connection.Close();
             }
         }
+
+        private void showButton_Click(object sender, EventArgs e)
+        {
+            Utilities.ShowDataGridView(this, dataGridView1, connection);
+        }
     }
 }

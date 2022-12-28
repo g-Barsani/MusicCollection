@@ -135,7 +135,7 @@
             // 
             // newButton
             // 
-            this.newButton.Location = new System.Drawing.Point(77, 202);
+            this.newButton.Location = new System.Drawing.Point(129, 204);
             this.newButton.Name = "newButton";
             this.newButton.Size = new System.Drawing.Size(95, 31);
             this.newButton.TabIndex = 6;
@@ -145,7 +145,7 @@
             // 
             // insertButton
             // 
-            this.insertButton.Location = new System.Drawing.Point(200, 202);
+            this.insertButton.Location = new System.Drawing.Point(252, 204);
             this.insertButton.Name = "insertButton";
             this.insertButton.Size = new System.Drawing.Size(95, 31);
             this.insertButton.TabIndex = 7;
@@ -155,7 +155,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(326, 202);
+            this.deleteButton.Location = new System.Drawing.Point(378, 204);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(95, 31);
             this.deleteButton.TabIndex = 8;
@@ -170,6 +170,7 @@
             this.showButton.TabIndex = 10;
             this.showButton.Text = "&Show";
             this.showButton.UseVisualStyleBackColor = true;
+            this.showButton.Click += new System.EventHandler(this.showButton_Click);
             // 
             // dataGridView1
             // 
@@ -177,7 +178,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(31, 250);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(512, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(644, 150);
             this.dataGridView1.TabIndex = 7;
             // 
             // searchLabel
@@ -191,7 +192,7 @@
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(448, 202);
+            this.updateButton.Location = new System.Drawing.Point(500, 204);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(95, 31);
             this.updateButton.TabIndex = 9;
@@ -209,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 462);
+            this.ClientSize = new System.Drawing.Size(706, 462);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.showButton);
             this.Controls.Add(this.updateButton);
