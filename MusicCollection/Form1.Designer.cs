@@ -41,18 +41,18 @@
             this.newButton = new System.Windows.Forms.Button();
             this.insertButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.showButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.searchLabel = new System.Windows.Forms.Label();
             this.updateButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.labelBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // albumLabel
             // 
             this.albumLabel.AutoSize = true;
-            this.albumLabel.Location = new System.Drawing.Point(98, 27);
+            this.albumLabel.Location = new System.Drawing.Point(96, 27);
             this.albumLabel.Name = "albumLabel";
             this.albumLabel.Size = new System.Drawing.Size(52, 19);
             this.albumLabel.TabIndex = 0;
@@ -84,7 +84,7 @@
             // genreLabel
             // 
             this.genreLabel.AutoSize = true;
-            this.genreLabel.Location = new System.Drawing.Point(98, 95);
+            this.genreLabel.Location = new System.Drawing.Point(98, 91);
             this.genreLabel.Name = "genreLabel";
             this.genreLabel.Size = new System.Drawing.Size(53, 19);
             this.genreLabel.TabIndex = 0;
@@ -100,7 +100,7 @@
             // yearOfReleaseLabel
             // 
             this.yearOfReleaseLabel.AutoSize = true;
-            this.yearOfReleaseLabel.Location = new System.Drawing.Point(31, 123);
+            this.yearOfReleaseLabel.Location = new System.Drawing.Point(34, 123);
             this.yearOfReleaseLabel.Name = "yearOfReleaseLabel";
             this.yearOfReleaseLabel.Size = new System.Drawing.Size(117, 19);
             this.yearOfReleaseLabel.TabIndex = 0;
@@ -116,7 +116,7 @@
             // categoryLabel
             // 
             this.categoryLabel.AutoSize = true;
-            this.categoryLabel.Location = new System.Drawing.Point(77, 155);
+            this.categoryLabel.Location = new System.Drawing.Point(73, 160);
             this.categoryLabel.Name = "categoryLabel";
             this.categoryLabel.Size = new System.Drawing.Size(71, 19);
             this.categoryLabel.TabIndex = 2;
@@ -125,6 +125,9 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "CD",
+            "Lp"});
             this.comboBox1.Location = new System.Drawing.Point(150, 152);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(131, 27);
@@ -144,7 +147,7 @@
             this.insertButton.Location = new System.Drawing.Point(200, 202);
             this.insertButton.Name = "insertButton";
             this.insertButton.Size = new System.Drawing.Size(95, 31);
-            this.insertButton.TabIndex = 6;
+            this.insertButton.TabIndex = 7;
             this.insertButton.Text = "&Insert";
             this.insertButton.UseVisualStyleBackColor = true;
             // 
@@ -153,18 +156,18 @@
             this.deleteButton.Location = new System.Drawing.Point(326, 202);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(95, 31);
-            this.deleteButton.TabIndex = 6;
+            this.deleteButton.TabIndex = 8;
             this.deleteButton.Text = "&Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // showButton
             // 
-            this.button4.Location = new System.Drawing.Point(31, 419);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 31);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "button1";
-            this.button4.UseVisualStyleBackColor = true;
+            this.showButton.Location = new System.Drawing.Point(31, 419);
+            this.showButton.Name = "showButton";
+            this.showButton.Size = new System.Drawing.Size(95, 31);
+            this.showButton.TabIndex = 10;
+            this.showButton.Text = "&Show";
+            this.showButton.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -175,30 +178,30 @@
             this.dataGridView1.Size = new System.Drawing.Size(512, 150);
             this.dataGridView1.TabIndex = 7;
             // 
-            // label1
+            // searchLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(280, 425);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 19);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Category:";
+            this.searchLabel.AutoSize = true;
+            this.searchLabel.Location = new System.Drawing.Point(280, 425);
+            this.searchLabel.Name = "searchLabel";
+            this.searchLabel.Size = new System.Drawing.Size(71, 19);
+            this.searchLabel.TabIndex = 2;
+            this.searchLabel.Text = "Category:";
             // 
             // updateButton
             // 
             this.updateButton.Location = new System.Drawing.Point(448, 202);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(95, 31);
-            this.updateButton.TabIndex = 6;
+            this.updateButton.TabIndex = 9;
             this.updateButton.Text = "&Update";
             this.updateButton.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // labelBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(357, 422);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(142, 26);
-            this.textBox1.TabIndex = 4;
+            this.labelBox.Location = new System.Drawing.Point(357, 422);
+            this.labelBox.Name = "labelBox";
+            this.labelBox.Size = new System.Drawing.Size(142, 26);
+            this.labelBox.TabIndex = 11;
             // 
             // Form1
             // 
@@ -206,15 +209,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 462);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.showButton);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.insertButton);
             this.Controls.Add(this.newButton);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.categoryLabel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelBox);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.genreBox);
             this.Controls.Add(this.yearOfReleaseLabel);
@@ -246,10 +249,10 @@
         private Button newButton;
         private Button insertButton;
         private Button deleteButton;
-        private Button button4;
+        private Button showButton;
         private DataGridView dataGridView1;
-        private Label label1;
+        private Label searchLabel;
         private Button updateButton;
-        private TextBox textBox1;
+        private TextBox labelBox;
     }
 }
