@@ -28,11 +28,11 @@ namespace MusicCollection
             }
         }
     }
-    public static void ShowDataGridView(Control form, DataGridView dataGridView1, SqlConnection connection)
-    {
-        SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Albums", connection);
-        var dataTable = new DataTable();
-        sqlDa.Fill(dataTable);
-        dataGridView1.DataSource = dataTable;
-    }
+    //public static void ShowDataGridView(Control form, DataGridView dataGridView1, SqlConnection connection)
+    //{
+    //    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Albums", connection);
+    //    var dataTable = new DataTable();
+    //    sqlDa.Fill(dataTable);
+    //    dataGridView1.DataSource = dataTable;
+    //}
 }
