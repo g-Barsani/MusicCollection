@@ -35,9 +35,9 @@
             this.genreLabel = new System.Windows.Forms.Label();
             this.genreBox = new System.Windows.Forms.TextBox();
             this.yearOfReleaseLabel = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.yearOfReleaseBox = new System.Windows.Forms.TextBox();
             this.categoryLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.categoryBox = new System.Windows.Forms.ComboBox();
             this.newButton = new System.Windows.Forms.Button();
             this.insertButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
@@ -106,12 +106,12 @@
             this.yearOfReleaseLabel.TabIndex = 0;
             this.yearOfReleaseLabel.Text = "Year of Release:";
             // 
-            // textBox4
+            // yearOfReleaseBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(150, 120);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(166, 26);
-            this.textBox4.TabIndex = 4;
+            this.yearOfReleaseBox.Location = new System.Drawing.Point(150, 120);
+            this.yearOfReleaseBox.Name = "yearOfReleaseBox";
+            this.yearOfReleaseBox.Size = new System.Drawing.Size(166, 26);
+            this.yearOfReleaseBox.TabIndex = 4;
             // 
             // categoryLabel
             // 
@@ -122,16 +122,16 @@
             this.categoryLabel.TabIndex = 2;
             this.categoryLabel.Text = "Category:";
             // 
-            // comboBox1
+            // categoryBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.categoryBox.FormattingEnabled = true;
+            this.categoryBox.Items.AddRange(new object[] {
             "CD",
             "Lp"});
-            this.comboBox1.Location = new System.Drawing.Point(150, 152);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(131, 27);
-            this.comboBox1.TabIndex = 5;
+            this.categoryBox.Location = new System.Drawing.Point(150, 152);
+            this.categoryBox.Name = "categoryBox";
+            this.categoryBox.Size = new System.Drawing.Size(131, 27);
+            this.categoryBox.TabIndex = 5;
             // 
             // newButton
             // 
@@ -151,6 +151,7 @@
             this.insertButton.TabIndex = 7;
             this.insertButton.Text = "&Insert";
             this.insertButton.UseVisualStyleBackColor = true;
+            this.insertButton.Click += new System.EventHandler(this.insertButton_Click);
             // 
             // deleteButton
             // 
@@ -215,11 +216,11 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.insertButton);
             this.Controls.Add(this.newButton);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.categoryBox);
             this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.categoryLabel);
             this.Controls.Add(this.labelBox);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.yearOfReleaseBox);
             this.Controls.Add(this.genreBox);
             this.Controls.Add(this.yearOfReleaseLabel);
             this.Controls.Add(this.artistBox);
@@ -244,9 +245,9 @@
         private Label genreLabel;
         private TextBox genreBox;
         private Label yearOfReleaseLabel;
-        private TextBox textBox4;
+        private TextBox yearOfReleaseBox;
         private Label categoryLabel;
-        private ComboBox comboBox1;
+        private ComboBox categoryBox;
         private Button newButton;
         private Button insertButton;
         private Button deleteButton;
