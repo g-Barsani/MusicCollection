@@ -70,8 +70,6 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-            // Prevent user from doing CTRL + V or pasting in the text boxes
-            //Clipboard.Clear();
             if (searchBox.Text != placeholder && !searchBox.Text.Contains('.'))
             {
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Albums WHERE ID = '" + searchBox.Text + "'", connection);
@@ -93,6 +91,28 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
         (e.KeyChar != '.') && !(searchBox.Text == placeholder))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                string sqlCommand = "DELETE FROM Albums WHERE ID = " + id + "";
+                SqlCommand command = new SqlCommand(sqlCommand, connection);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Record deleted successfully.");
+                Utilities.ResetAllControls(this);
+                searchBox.Text = "Enter an ID...";
+                albumBox.Focus();
+
+                Utilities.ShowDataGridView(this, dataGridView1, connection);
+            }
+
+            finally
+            {
+                connection.Close();
             }
         }
     }
