@@ -214,6 +214,7 @@
             this.searchBox.ForeColor = System.Drawing.Color.Silver;
             this.searchBox.Location = new System.Drawing.Point(357, 422);
             this.searchBox.Name = "searchBox";
+            this.searchBox.ShortcutsEnabled = false;
             this.searchBox.Size = new System.Drawing.Size(142, 26);
             this.searchBox.TabIndex = 11;
             this.searchBox.Text = "Enter an ID...";

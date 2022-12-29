@@ -70,6 +70,8 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
+            // Prevent user from doing CTRL + V or pasting in the text boxes
+            //Clipboard.Clear();
             if (searchBox.Text != placeholder && !searchBox.Text.Contains('.'))
             {
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Albums WHERE ID = '" + searchBox.Text + "'", connection);
