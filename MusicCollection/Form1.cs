@@ -41,14 +41,10 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
                 connection.Close();
             }
         }
-
         private void showButton_Click(object sender, EventArgs e)
         {
             Utilities.ShowDataGridView(this, dataGridView1, connection);
         }
-
-        
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Disable sort in dataGridView1
@@ -65,6 +61,7 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
                 genreBox.Text = row.Cells[3].Value.ToString();
                 yearOfReleaseBox.Text = row.Cells[4].Value.ToString();
                 categoryBox.Text = row.Cells[5].Value.ToString();
+                searchBox.Text = id.ToString();
             }
         }
 
