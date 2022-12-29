@@ -47,20 +47,7 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
             Utilities.ShowDataGridView(this, dataGridView1, connection);
         }
 
-        private void searchBox_Enter(object sender, EventArgs e)
-        {
-            if (searchBox.Text == "")
-                searchBox.Text = placeholder;
-            searchBox.ForeColor = Color.Silver;
-        }
-
-        private void searchBox_Leave(object sender, EventArgs e)
-        {
-            
-            if (searchBox.Text == placeholder)
-                searchBox.Text = "";
-            searchBox.ForeColor = Color.Black;
-        }
+        
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -85,6 +72,23 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
                 var dataTable = new DataTable();
                 sqlDa.Fill(dataTable);
                 dataGridView1.DataSource = dataTable;
+            }
+        }
+
+        private void searchBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            searchBox.Text = "";
+            searchBox.ForeColor = Color.Black;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.') && !(searchBox.Text == placeholder))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((sender as TextBox).Text.IndexOf('.') > -1 && !(searchBox.Text == placeholder))
+            {
+                e.Handled = true;
             }
         }
     }

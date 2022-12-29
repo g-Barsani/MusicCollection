@@ -218,7 +218,7 @@
             this.searchBox.TabIndex = 11;
             this.searchBox.Text = "Enter an ID...";
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            this.searchBox.Enter += new System.EventHandler(this.searchBox_Leave);
+            this.searchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchBox_KeyPress);
             // 
             // Form1
             // 
