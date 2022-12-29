@@ -55,7 +55,7 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 id = Convert.ToInt32(row.Cells[0].Value);
-                searchBox.Text = row.Cells[0].Value.ToString();
+                //searchBox.Text = row.Cells[0].Value.ToString();
                 albumBox.Text = row.Cells[1].Value.ToString();
                 artistBox.Text = row.Cells[2].Value.ToString();
                 genreBox.Text = row.Cells[3].Value.ToString();
