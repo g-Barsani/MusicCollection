@@ -45,7 +45,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.searchLabel = new System.Windows.Forms.Label();
             this.updateButton = new System.Windows.Forms.Button();
-            this.labelBox = new System.Windows.Forms.TextBox();
+            this.searchBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,21 +174,31 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(31, 250);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(644, 150);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // searchLabel
             // 
             this.searchLabel.AutoSize = true;
             this.searchLabel.Location = new System.Drawing.Point(280, 425);
             this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(71, 19);
+            this.searchLabel.Size = new System.Drawing.Size(59, 19);
             this.searchLabel.TabIndex = 2;
-            this.searchLabel.Text = "Category:";
+            this.searchLabel.Text = "Search:";
             // 
             // updateButton
             // 
@@ -199,12 +209,15 @@
             this.updateButton.Text = "&Update";
             this.updateButton.UseVisualStyleBackColor = true;
             // 
-            // labelBox
+            // searchBox
             // 
-            this.labelBox.Location = new System.Drawing.Point(357, 422);
-            this.labelBox.Name = "labelBox";
-            this.labelBox.Size = new System.Drawing.Size(142, 26);
-            this.labelBox.TabIndex = 11;
+            this.searchBox.ForeColor = System.Drawing.Color.Silver;
+            this.searchBox.Location = new System.Drawing.Point(357, 422);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(142, 26);
+            this.searchBox.TabIndex = 11;
+            this.searchBox.Text = "Enter an ID...";
+            this.searchBox.Enter += new System.EventHandler(this.searchBox_Leave);
             // 
             // Form1
             // 
@@ -220,7 +233,7 @@
             this.Controls.Add(this.categoryBox);
             this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.categoryLabel);
-            this.Controls.Add(this.labelBox);
+            this.Controls.Add(this.searchBox);
             this.Controls.Add(this.yearOfReleaseBox);
             this.Controls.Add(this.genreBox);
             this.Controls.Add(this.yearOfReleaseLabel);
@@ -256,6 +269,6 @@
         private DataGridView dataGridView1;
         private Label searchLabel;
         private Button updateButton;
-        private TextBox labelBox;
+        private TextBox searchBox;
     }
 }

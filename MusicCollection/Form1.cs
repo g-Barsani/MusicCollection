@@ -8,6 +8,8 @@ namespace MusicCollection
 Initial Catalog=MusicCollection;Integrated Security=True;");
         SqlCommand command;
         DataTable table;
+        string placeholder = "Enter an ID...";
+        int id;
         public Form1()
         {
             InitializeComponent();
@@ -17,6 +19,8 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
         {
             Utilities.ResetAllControls(this);
             albumBox.Focus();
+            searchBox.Text = placeholder;
+            searchBox.ForeColor = Color.Silver;
         }
 
         private void insertButton_Click(object sender, EventArgs e)
@@ -41,6 +45,36 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
         private void showButton_Click(object sender, EventArgs e)
         {
             Utilities.ShowDataGridView(this, dataGridView1, connection);
+        }
+
+        private void searchBox_Enter(object sender, EventArgs e)
+        {
+            if (searchBox.Text == "")
+                searchBox.Text = placeholder;
+            searchBox.ForeColor = Color.Silver;
+        }
+
+        private void searchBox_Leave(object sender, EventArgs e)
+        {
+            
+            if (searchBox.Text == placeholder)
+                searchBox.Text = "";
+            searchBox.ForeColor = Color.Black;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                id = Convert.ToInt32(row.Cells[0].Value);
+                searchBox.Text = row.Cells[0].Value.ToString();
+                albumBox.Text = row.Cells[1].Value.ToString();
+                artistBox.Text = row.Cells[2].Value.ToString();
+                genreBox.Text = row.Cells[3].Value.ToString();
+                yearOfReleaseBox.Text = row.Cells[4].Value.ToString();
+                categoryBox.Text = row.Cells[5].Value.ToString();
+            }
         }
     }
 }
