@@ -217,6 +217,7 @@
             this.searchBox.Size = new System.Drawing.Size(142, 26);
             this.searchBox.TabIndex = 11;
             this.searchBox.Text = "Enter an ID...";
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             this.searchBox.Enter += new System.EventHandler(this.searchBox_Leave);
             // 
             // Form1

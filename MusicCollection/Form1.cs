@@ -76,5 +76,16 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
                 categoryBox.Text = row.Cells[5].Value.ToString();
             }
         }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            if (searchBox.Text != placeholder)
+            {
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Albums WHERE ID = '" + searchBox.Text + "'", connection);
+                var dataTable = new DataTable();
+                sqlDa.Fill(dataTable);
+                dataGridView1.DataSource = dataTable;
+            }
+        }
     }
 }
