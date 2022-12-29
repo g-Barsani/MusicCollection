@@ -51,11 +51,15 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Disable sort in dataGridView1
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+
+            // Do the code below if the user didn't click on a header
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 id = Convert.ToInt32(row.Cells[0].Value);
-                //searchBox.Text = row.Cells[0].Value.ToString();
                 albumBox.Text = row.Cells[1].Value.ToString();
                 artistBox.Text = row.Cells[2].Value.ToString();
                 genreBox.Text = row.Cells[3].Value.ToString();
@@ -66,7 +70,7 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-            if (searchBox.Text != placeholder)
+            if (searchBox.Text != placeholder && !searchBox.Text.Contains('.'))
             {
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Albums WHERE ID = '" + searchBox.Text + "'", connection);
                 var dataTable = new DataTable();
@@ -77,16 +81,14 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
 
         private void searchBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            searchBox.Text = "";
+            searchBox.MaxLength = 5;
+            if (searchBox.Text == placeholder) 
+            {
+                searchBox.Text = "";
+            }
             searchBox.ForeColor = Color.Black;
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
         (e.KeyChar != '.') && !(searchBox.Text == placeholder))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((sender as TextBox).Text.IndexOf('.') > -1 && !(searchBox.Text == placeholder))
             {
                 e.Handled = true;
             }
