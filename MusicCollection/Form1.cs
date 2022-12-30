@@ -79,7 +79,7 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
         private void searchBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             searchBox.MaxLength = 5;
-            if (searchBox.Text == placeholder) 
+            if (searchBox.Text == placeholder)
             {
                 searchBox.Text = "";
             }
@@ -112,5 +112,43 @@ Initial Catalog=MusicCollection;Integrated Security=True;");
                 connection.Close();
             }
         }
-    }
-}
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            if (searchBox.Text != placeholder && !searchBox.Text.Contains('.') && searchBox.Text != "")
+            {
+                connection.Open();
+                SqlCommand commandToCheckProductId = new SqlCommand("SELECT * FROM Albums WHERE ID = '" + searchBox.Text + "'", connection);
+                // Convert.ToString() method handles null
+                string albumId = Convert.ToString(commandToCheckProductId.ExecuteScalar());  // Get the value from the first column (ID)
+                if (albumId == searchBox.Text)
+                {
+                    try
+                    {
+                        //connection.Open();
+                        string sqlCommand = "UPDATE Albums SET Album = '" + albumBox.Text + "', Artist = '" + artistBox.Text + "', Genre = '" + genreBox.Text + "', YearOfRelease = '" + yearOfReleaseBox.Text + "', Category = '" + categoryBox.Text + "' WHERE ID = '" + searchBox.Text + "'";
+                        SqlDataAdapter sqlDa = new SqlDataAdapter(sqlCommand, connection);
+                        sqlDa.SelectCommand.ExecuteNonQuery();
+                        MessageBox.Show("Record updated successfully.");
+
+                        Utilities.ShowDataGridView(this, dataGridView1, connection);
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This ID does not match any record.");
+                    connection.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Can't update with an invalid ID.");
+                connection.Close();
+            }
+        }
+    }   
+ }
