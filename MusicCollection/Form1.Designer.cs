@@ -52,122 +52,144 @@
             // albumLabel
             // 
             this.albumLabel.AutoSize = true;
-            this.albumLabel.Location = new System.Drawing.Point(96, 27);
+            this.albumLabel.Font = new System.Drawing.Font("Mr Accordion", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.albumLabel.Location = new System.Drawing.Point(156, 28);
             this.albumLabel.Name = "albumLabel";
-            this.albumLabel.Size = new System.Drawing.Size(52, 19);
+            this.albumLabel.Size = new System.Drawing.Size(60, 30);
             this.albumLabel.TabIndex = 0;
             this.albumLabel.Text = "Album:";
             // 
             // albumBox
             // 
-            this.albumBox.Location = new System.Drawing.Point(150, 24);
+            this.albumBox.BackColor = System.Drawing.SystemColors.Info;
+            this.albumBox.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.albumBox.Location = new System.Drawing.Point(222, 25);
             this.albumBox.Name = "albumBox";
-            this.albumBox.Size = new System.Drawing.Size(282, 26);
+            this.albumBox.Size = new System.Drawing.Size(414, 39);
             this.albumBox.TabIndex = 1;
             // 
             // artistLabel
             // 
             this.artistLabel.AutoSize = true;
-            this.artistLabel.Location = new System.Drawing.Point(98, 59);
+            this.artistLabel.Font = new System.Drawing.Font("Mr Accordion", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.artistLabel.Location = new System.Drawing.Point(156, 71);
             this.artistLabel.Name = "artistLabel";
-            this.artistLabel.Size = new System.Drawing.Size(54, 19);
+            this.artistLabel.Size = new System.Drawing.Size(56, 30);
             this.artistLabel.TabIndex = 0;
             this.artistLabel.Text = "Artist:";
             // 
             // artistBox
             // 
-            this.artistBox.Location = new System.Drawing.Point(150, 56);
+            this.artistBox.BackColor = System.Drawing.SystemColors.Info;
+            this.artistBox.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.artistBox.Location = new System.Drawing.Point(222, 68);
             this.artistBox.Name = "artistBox";
-            this.artistBox.Size = new System.Drawing.Size(282, 26);
+            this.artistBox.Size = new System.Drawing.Size(337, 39);
             this.artistBox.TabIndex = 2;
             // 
             // genreLabel
             // 
             this.genreLabel.AutoSize = true;
-            this.genreLabel.Location = new System.Drawing.Point(98, 91);
+            this.genreLabel.Font = new System.Drawing.Font("Mr Accordion", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.genreLabel.Location = new System.Drawing.Point(149, 114);
             this.genreLabel.Name = "genreLabel";
-            this.genreLabel.Size = new System.Drawing.Size(53, 19);
+            this.genreLabel.Size = new System.Drawing.Size(63, 30);
             this.genreLabel.TabIndex = 0;
             this.genreLabel.Text = "Genre:";
             // 
             // genreBox
             // 
-            this.genreBox.Location = new System.Drawing.Point(150, 88);
+            this.genreBox.BackColor = System.Drawing.SystemColors.Info;
+            this.genreBox.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.genreBox.Location = new System.Drawing.Point(222, 111);
             this.genreBox.Name = "genreBox";
-            this.genreBox.Size = new System.Drawing.Size(166, 26);
+            this.genreBox.Size = new System.Drawing.Size(240, 39);
             this.genreBox.TabIndex = 3;
             // 
             // yearOfReleaseLabel
             // 
             this.yearOfReleaseLabel.AutoSize = true;
-            this.yearOfReleaseLabel.Location = new System.Drawing.Point(34, 123);
+            this.yearOfReleaseLabel.Font = new System.Drawing.Font("Mr Accordion", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.yearOfReleaseLabel.Location = new System.Drawing.Point(71, 156);
             this.yearOfReleaseLabel.Name = "yearOfReleaseLabel";
-            this.yearOfReleaseLabel.Size = new System.Drawing.Size(117, 19);
+            this.yearOfReleaseLabel.Size = new System.Drawing.Size(141, 30);
             this.yearOfReleaseLabel.TabIndex = 0;
             this.yearOfReleaseLabel.Text = "Year of Release:";
             // 
             // yearOfReleaseBox
             // 
-            this.yearOfReleaseBox.Location = new System.Drawing.Point(150, 120);
+            this.yearOfReleaseBox.BackColor = System.Drawing.SystemColors.Info;
+            this.yearOfReleaseBox.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.yearOfReleaseBox.Location = new System.Drawing.Point(222, 153);
             this.yearOfReleaseBox.Name = "yearOfReleaseBox";
-            this.yearOfReleaseBox.Size = new System.Drawing.Size(166, 26);
+            this.yearOfReleaseBox.Size = new System.Drawing.Size(166, 39);
             this.yearOfReleaseBox.TabIndex = 4;
             // 
             // categoryLabel
             // 
             this.categoryLabel.AutoSize = true;
-            this.categoryLabel.Location = new System.Drawing.Point(73, 160);
+            this.categoryLabel.Font = new System.Drawing.Font("Mr Accordion", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.categoryLabel.Location = new System.Drawing.Point(123, 199);
             this.categoryLabel.Name = "categoryLabel";
-            this.categoryLabel.Size = new System.Drawing.Size(71, 19);
+            this.categoryLabel.Size = new System.Drawing.Size(89, 30);
             this.categoryLabel.TabIndex = 2;
             this.categoryLabel.Text = "Category:";
             // 
             // categoryBox
             // 
+            this.categoryBox.BackColor = System.Drawing.SystemColors.Info;
+            this.categoryBox.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.categoryBox.FormattingEnabled = true;
             this.categoryBox.Items.AddRange(new object[] {
             "CD",
             "Lp"});
-            this.categoryBox.Location = new System.Drawing.Point(150, 152);
+            this.categoryBox.Location = new System.Drawing.Point(222, 196);
             this.categoryBox.Name = "categoryBox";
-            this.categoryBox.Size = new System.Drawing.Size(131, 27);
+            this.categoryBox.Size = new System.Drawing.Size(131, 40);
             this.categoryBox.TabIndex = 5;
             // 
             // newButton
             // 
-            this.newButton.Location = new System.Drawing.Point(129, 204);
+            this.newButton.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.newButton.Font = new System.Drawing.Font("Mr Accordion", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.newButton.Location = new System.Drawing.Point(131, 254);
             this.newButton.Name = "newButton";
-            this.newButton.Size = new System.Drawing.Size(95, 31);
+            this.newButton.Size = new System.Drawing.Size(95, 40);
             this.newButton.TabIndex = 6;
             this.newButton.Text = "&New";
-            this.newButton.UseVisualStyleBackColor = true;
+            this.newButton.UseVisualStyleBackColor = false;
             this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // insertButton
             // 
-            this.insertButton.Location = new System.Drawing.Point(252, 204);
+            this.insertButton.BackColor = System.Drawing.Color.Khaki;
+            this.insertButton.Font = new System.Drawing.Font("Mr Accordion", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.insertButton.Location = new System.Drawing.Point(254, 254);
             this.insertButton.Name = "insertButton";
-            this.insertButton.Size = new System.Drawing.Size(95, 31);
+            this.insertButton.Size = new System.Drawing.Size(95, 40);
             this.insertButton.TabIndex = 7;
             this.insertButton.Text = "&Insert";
-            this.insertButton.UseVisualStyleBackColor = true;
+            this.insertButton.UseVisualStyleBackColor = false;
             this.insertButton.Click += new System.EventHandler(this.insertButton_Click);
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(378, 204);
+            this.deleteButton.BackColor = System.Drawing.Color.IndianRed;
+            this.deleteButton.Font = new System.Drawing.Font("Mr Accordion", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.deleteButton.Location = new System.Drawing.Point(380, 254);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(95, 31);
+            this.deleteButton.Size = new System.Drawing.Size(95, 40);
             this.deleteButton.TabIndex = 8;
             this.deleteButton.Text = "&Delete";
-            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // showButton
             // 
-            this.showButton.Location = new System.Drawing.Point(31, 419);
+            this.showButton.Font = new System.Drawing.Font("Mr Accordion", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.showButton.Location = new System.Drawing.Point(32, 474);
             this.showButton.Name = "showButton";
-            this.showButton.Size = new System.Drawing.Size(95, 31);
+            this.showButton.Size = new System.Drawing.Size(95, 36);
             this.showButton.TabIndex = 10;
             this.showButton.Text = "&Show";
             this.showButton.UseVisualStyleBackColor = true;
@@ -179,8 +201,9 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 250);
+            this.dataGridView1.Location = new System.Drawing.Point(33, 313);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -188,36 +211,41 @@
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(644, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(697, 150);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // searchLabel
             // 
             this.searchLabel.AutoSize = true;
-            this.searchLabel.Location = new System.Drawing.Point(280, 425);
+            this.searchLabel.Font = new System.Drawing.Font("Mr Accordion", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.searchLabel.Location = new System.Drawing.Point(281, 480);
             this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(59, 19);
+            this.searchLabel.Size = new System.Drawing.Size(69, 30);
             this.searchLabel.TabIndex = 2;
             this.searchLabel.Text = "Search:";
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(500, 204);
+            this.updateButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.updateButton.Font = new System.Drawing.Font("Mr Accordion", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.updateButton.Location = new System.Drawing.Point(502, 254);
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(95, 31);
+            this.updateButton.Size = new System.Drawing.Size(95, 40);
             this.updateButton.TabIndex = 9;
             this.updateButton.Text = "&Update";
-            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.UseVisualStyleBackColor = false;
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // searchBox
             // 
-            this.searchBox.ForeColor = System.Drawing.Color.Silver;
-            this.searchBox.Location = new System.Drawing.Point(357, 422);
+            this.searchBox.BackColor = System.Drawing.SystemColors.Info;
+            this.searchBox.Font = new System.Drawing.Font("Segoe UI Semilight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.searchBox.ForeColor = System.Drawing.Color.DarkGray;
+            this.searchBox.Location = new System.Drawing.Point(358, 477);
             this.searchBox.Name = "searchBox";
             this.searchBox.ShortcutsEnabled = false;
-            this.searchBox.Size = new System.Drawing.Size(142, 26);
+            this.searchBox.Size = new System.Drawing.Size(142, 39);
             this.searchBox.TabIndex = 11;
             this.searchBox.Text = "Enter an ID...";
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
@@ -227,7 +255,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 462);
+            this.BackColor = System.Drawing.Color.Beige;
+            this.ClientSize = new System.Drawing.Size(763, 538);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.showButton);
             this.Controls.Add(this.updateButton);
@@ -246,8 +275,10 @@
             this.Controls.Add(this.albumBox);
             this.Controls.Add(this.artistLabel);
             this.Controls.Add(this.albumLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Music Collection by Gabriel B.";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

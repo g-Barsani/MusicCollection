@@ -1,5 +1,7 @@
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
+
 namespace MusicCollection
 {
     public partial class Form1 : Form
@@ -7,12 +9,12 @@ namespace MusicCollection
         SqlConnection connection = new SqlConnection(@"Data Source=SAMSUNG\SQLEXPRESS;
 Initial Catalog=MusicCollection;Integrated Security=True;");
         SqlCommand command;
-        DataTable table;
         string placeholder = "Enter an ID...";
         int id;
         public Form1()
         {
             InitializeComponent();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
         private void newButton_Click(object sender, EventArgs e)
